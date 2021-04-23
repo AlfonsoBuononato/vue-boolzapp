@@ -55,9 +55,11 @@
                 </div>
 
                 <!-- ASIDE CONTACTS -->
-                <div class="contacts">
-                    <button>inserire img</button>
-                    <span>nome</span>
+                <div class="contact">
+                    <div class="contact-aside" v-for="(contact, index) in contacts">
+                        <img class="img-contact" :src="'img/'+'avatar' + contact.avatar + '.jpg'">
+                        <span>{{contact.name}}</span>
+                    </div>
                 </div>
 
             </aside>
