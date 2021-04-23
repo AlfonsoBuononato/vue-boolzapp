@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* UTILITES */
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.direction-column{
+    flex-direction: column;
+}
+
+.size-8{
+    font-size: 8px;
+}
+
+.size-10{
+    font-size: 10px;
+}
+
+.size-14{
+    font-size: 14px;
+}
+
+.size-12{
+    font-size: 12px;
+}
+
+.size-16{
+    font-size: 16px;
+}
+
+/* COLOR */
+
+.gray{
+    color: #b9b9b9;
+}
+
+.verde-chiaro{
+    background-color: #dbf9bf;
+}
+.bianco{
+    background-color: #fff;
+}
+
+/* RESET IMAGE */
+
+.img-header{
+    width: 40px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* BACKGROUND */
+
+.background{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+        to bottom,
+            #30a093 0%,
+            #30a093 20%,
+            #dcdfda 20%,
+            #dcdfda 100%
+    );
+}
+
+/* CONTAINER */
+
+.container{
+    display: flex;
+    min-width: 900px;
+    height: 85%;
+}
+
+/* ASIDE */
+
+.content-left{
+    width: 35%;
+    background: #ffffff;
+}
+
+/* ASIDE E MAIN-CONTENT HEADER */
+
+aside .header{
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background: #ececec;
+}
+
+aside .header-left{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+}
+
+aside .header-right i,
+main .main-top-right i{
+    padding: 0 5px;
+    font-size: 14px;
+    color: #b9b9b9;
+}
+
+aside .header-right i:last-child,
+main .main-top-right i:last-child{
+    padding: 0 10px 0 5px;
+}
+
+/* ASIDE NOTIFICHE */
+
+aside .notifiche{
+    display: flex;
+    height: 55px;
+    background-color: #a1defd;
+    align-items: center;
+}
+
+aside .notifiche i{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    margin: 0 5px 0 10px;
+    font-size: 18px;
+    color: #a1defd;
+    background-color: #fff;
+}
+
+aside .notifiche span{
+    font-size: 12px;
+    color: #618497;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+aside .search{
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    background-color: #eaeaea;
+}
+
+aside .search button{
+    width: 15%;
+    padding: 5px 0;
+    border: 1px solid #bdbbbb;
+    outline: none;
+    background-color: #fff;
+    color: #bec0c2;
+    cursor: pointer;
+}
+
+aside .search input{
+    flex-grow: 1;
+    border: 1px solid #bdbbbb;
+    outline: none;
+    padding: 5px 2px;
+    font-size: 10px;
+    color: #bec0c2;
+}
+
+/* MAIN-CONTENT */
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* MAIN SECTION-TOP */
+
+main .main-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #bdbbbb;
+    height: 50px;
+    background-color: #ececec;
+}
+
+main .main-top-left{
+    display: flex;
+    flex-direction: row;
+}
+
+/* SECTION CENTER MESSAGE */
+
+main .message{
+    flex-grow: 1;
+}
+
+main .message{
+    background-image: url("../img/mine.jpg");
+}
+
+main .messaggi-ricevuti,
+main .messaggi-inviati{
+    display: flex;
+    width: 100%;
+    padding: 10px 50px;
+}
+
+main .messaggi-inviati{
+    justify-content: end;
+}
+
+
+main .nuvoletta-ricevuti,
+main .nuvoletta-inviati{
+    display: flex;
+    position: relative;
+    width: 40%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* DATA DA INSERIRE NEI MESSAGGI CON ABSOLUTE */
+main .nuvoletta-ricevuti .data,
+main .nuvoletta-inviati .data{
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
+
+
+
+/* SECTION MAIN FOOTER */
+
+main .footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #f3efec;
+    border-left: 1px solid #bdbbbb;
+}
+
+main .footer .smile,
+main .footer .registration{
+    width: 10%;
+    text-align: center;
+    color: #595959;
+}
+
+main .footer .text{
+    flex-grow: 1;
+}
+
+main .footer .text input{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 4px;
+    outline: none;
+    color: #bdbbbb;
+}

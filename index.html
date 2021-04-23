@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- STYLE -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <title>prova</title>
+</head>
+<body>
+    <!-- BACKGROUND -->
+    <div class="background">
+
+        <div id="app" class="container">
+            <!-- ASIDE PARTE SINISTRA-->
+            <aside class="content-left">
+
+                <!-- ASIDE HEADER -->
+                <header class="header">
+                    <div class="header-left">
+                        <img class="img-header" src="img/avatar_io.jpg" alt="profilo">
+                        <h6>Nome Utente</h6>
+                    </div>
+                    <div class="header-right">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </header>
+
+                <!-- ASIDE NOTIFICHE -->
+                <div class="notifiche">
+                    <div>
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div>
+                        <h6>Ricevi notifiche di messaggi nuovi</h6>
+                        <span>Attiva notifiche desktop</span>
+                    </div>
+                </div>
+
+                <!-- ASIDE SEARCH -->
+                <div class="search">
+                    <button><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="cerca o inizia una nuova chat">
+                </div>
+
+                <!-- ASIDE CONTACTS -->
+                <div class="contacts">
+                    <button>inserire img</button>
+                    <span>nome</span>
+                </div>
+
+            </aside>
+
+            <!-- MAIN CONTENT PARTE DESTRA-->
+            <main class="main-content">
+
+                <!-- SECTION TOP -->
+                <section class="main-top">
+                    <div class="main-top-left">
+                        <img class="img-header" src="img/avatar_1.jpg" alt="michele">
+                        <div class="flex direction-column">
+                            <span class="size-12"><b>Michele</b></span>
+                            <span class="size-10 gray">Ultimo accesso oggi alle 10:35</span>
+                        </div>
+                    </div>
+                    <div class="main-top-right">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </section>
+
+                <!-- SECTION CENTER MESSAGE -->
+                <section class="message">
+                    <div class="messaggi-ricevuti">
+                        <div class="nuvoletta-ricevuti size-12 bianco">
+                            <span>Messaggio ricevuto</span>
+                            <span class="data size-8">10/01/2021 15:50:00</span>
+                        </div>
+                    </div>
+                    <div class="messaggi-inviati">
+                        <div class="nuvoletta-inviati size-12 verde-chiaro">
+                            <span>Messaggio inviato</span>
+                            <span class="data size-8">10/01/2021 15:50:00</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION MAIN FOOTER -->
+                <section class="footer">
+                    <div class="smile">
+                        <i class="far fa-smile"></i>
+                    </div>
+                    <div class="text">
+                        <input class="size-10" type="text" placeholder="Scrivi un messaggio">
+                    </div>
+                    <div class="registration">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+
+    </div>
+    <!-- SCRIPT -->
+    <script src="js/contatti.js"></script>
+</body>
+</html>
