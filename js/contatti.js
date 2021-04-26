@@ -102,10 +102,22 @@ const app = new Vue({
             },
         ],
         indexContacts: 0,
+        textInput: "",
     },
     methods: {
         chat(index){
             this.indexContacts = index;
+            console.log("messages", this.contacts[this.indexContacts].messages);
+        },
+        addMessage(){
+            if(this.textInput !== ""){
+                this.contacts[this.indexContacts].messages.push({
+                    message: this.textInput,
+                    status: 'sent',
+                })
+
+                this.textInput = "";
+            }
         }
     }
 })

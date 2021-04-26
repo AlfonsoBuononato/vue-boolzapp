@@ -36,6 +36,12 @@
     font-size: 16px;
 }
 
+/* UTILITIES JS */
+
+.active{
+    background-color: #bdbbbb;
+}
+
 /* COLOR */
 
 .gray{
@@ -188,6 +194,11 @@ aside .contact-aside{
     border-bottom: 1px solid #eaeaea;
 }
 
+aside .contact-aside:hover{
+    background-color: #bdbbbb;
+    cursor: pointer;
+}
+
 aside .contact-aside span{
     margin-left: 7px;
 }
@@ -220,7 +231,7 @@ main .main-top-left{
 /* SECTION CENTER MESSAGE */
 
 main .message{
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 main .message{

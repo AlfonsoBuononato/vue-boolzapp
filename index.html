@@ -57,6 +57,7 @@
                 <!-- ASIDE CONTACTS -->
                 <div class="contact">
                     <div class="contact-aside"
+                        :class="{active: index == indexContacts}"
                         v-for="(contact, index) in contacts"
                         @click="chat(index)">
                         <img class="img-contact" :src="'img/'+'avatar' + contact.avatar + '.jpg'">
@@ -90,18 +91,17 @@
                 </section>
 
                 <!-- SECTION CENTER MESSAGE -->
-                <section class="message">
-                    <div class="messaggi-ricevuti" 
-                        v-for="(contact, index) in contacts"
-                        v-show="contacts[index] == contacts[indexContacts]" >
-                        <div class="nuvoletta-ricevuti size-12 bianco"> 
-                            <span>{{contact.messages[messages.message]}}</span>
+                <section class="message" 
+                        v-for="(message, index) in this.contacts[this.indexContacts].messages">
+                    <div class="messaggi-ricevuti">
+                        <div class="nuvoletta-ricevuti size-12 bianco" v-show="message.status == 'received'"> 
+                            <span>{{message.message}}</span>
                             <span class="data size-8">10/01/2021 15:50:00</span>
                         </div>
                     </div>
                     <div class="messaggi-inviati">
-                        <div class="nuvoletta-inviati size-12 verde-chiaro">
-                            <span>Messaggio inviato</span>
+                        <div class="nuvoletta-inviati size-12 verde-chiaro" v-show="message.status == 'sent'">
+                            <span>{{message.message}}</span>
                             <span class="data size-8">10/01/2021 15:50:00</span>
                         </div>
                     </div>
@@ -113,7 +113,11 @@
                         <i class="far fa-smile"></i>
                     </div>
                     <div class="text">
-                        <input class="size-10" type="text" placeholder="Scrivi un messaggio">
+                        <input class="size-10"
+                            type="text" 
+                            placeholder="Scrivi un messaggio"
+                            @keyup.enter="addMessage"
+                            v-model="textInput">
                     </div>
                     <div class="registration">
                         <i class="fas fa-microphone"></i>
