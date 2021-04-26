@@ -95,7 +95,7 @@
                         v-for="(contact, index) in contacts"
                         v-show="contacts[index] == contacts[indexContacts]" >
                         <div class="nuvoletta-ricevuti size-12 bianco"> 
-                            <span>{{contact.messages}}</span>
+                            <span>{{contact.messages[messages.message]}}</span>
                             <span class="data size-8">10/01/2021 15:50:00</span>
                         </div>
                     </div>
