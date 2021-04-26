@@ -56,7 +56,9 @@
 
                 <!-- ASIDE CONTACTS -->
                 <div class="contact">
-                    <div class="contact-aside" v-for="(contact, index) in contacts">
+                    <div class="contact-aside"
+                        v-for="(contact, index) in contacts"
+                        @click="chat(index)">
                         <img class="img-contact" :src="'img/'+'avatar' + contact.avatar + '.jpg'">
                         <span>{{contact.name}}</span>
                     </div>
@@ -69,10 +71,14 @@
 
                 <!-- SECTION TOP -->
                 <section class="main-top">
-                    <div class="main-top-left">
-                        <img class="img-header" src="img/avatar_1.jpg" alt="michele">
+                    <div class="main-top-left" 
+                        v-for="(contact, index) in contacts"
+                        v-show="contacts[index] == contacts[indexContacts]" >
+                        <img class="img-header"
+                             :src="'img/'+'avatar' + contact.avatar + '.jpg'"
+                             alt="michele">
                         <div class="flex direction-column">
-                            <span class="size-12"><b>Michele</b></span>
+                            <span class="size-12"><b>{{contact.name}}</b></span>
                             <span class="size-10 gray">Ultimo accesso oggi alle 10:35</span>
                         </div>
                     </div>
@@ -85,9 +91,11 @@
 
                 <!-- SECTION CENTER MESSAGE -->
                 <section class="message">
-                    <div class="messaggi-ricevuti">
-                        <div class="nuvoletta-ricevuti size-12 bianco">
-                            <span>Messaggio ricevuto</span>
+                    <div class="messaggi-ricevuti" 
+                        v-for="(contact, index) in contacts"
+                        v-show="contacts[index] == contacts[indexContacts]" >
+                        <div class="nuvoletta-ricevuti size-12 bianco"> 
+                            <span>{{contact.messages}}</span>
                             <span class="data size-8">10/01/2021 15:50:00</span>
                         </div>
                     </div>
