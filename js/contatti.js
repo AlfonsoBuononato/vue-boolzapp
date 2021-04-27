@@ -127,7 +127,7 @@ const app = new Vue({
         },
         ricerca(){
             this.contacts.forEach((element)=>{
-                if(element.name.includes(this.searchInput)){
+                if(element.name.toLowerCase().includes(this.searchInput.toLowerCase())){
                     element.visible = true;
                 }else{
                     element.visible = false;
