@@ -230,11 +230,12 @@ main .main-top-left{
 
 /* SECTION CENTER MESSAGE */
 
-main .message{
-    /* flex-grow: 1; */
+main .conversation{
+    flex-grow: 1;
+    overflow: auto;
 }
 
-main .message{
+main .conversation{
     background-image: url("../img/mine.jpg");
 }
 

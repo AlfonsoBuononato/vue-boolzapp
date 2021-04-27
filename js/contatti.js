@@ -103,11 +103,11 @@ const app = new Vue({
         ],
         indexContacts: 0,
         textInput: "",
+        searchInput: "",
     },
     methods: {
         chat(index){
             this.indexContacts = index;
-            console.log("messages", this.contacts[this.indexContacts].messages);
         },
         addMessage(){
             if(this.textInput !== ""){
@@ -118,6 +118,21 @@ const app = new Vue({
 
                 this.textInput = "";
             }
+            setTimeout(() =>{
+                this.contacts[this.indexContacts].messages.push({
+                    message: "ok",
+                    status: 'received',
+                })
+            }, 1000)
+        },
+        ricerca(){
+            this.contacts.forEach((element)=>{
+                if(element.name.includes(this.searchInput)){
+                    element.visible = true;
+                }else{
+                    element.visible = false;
+                }
+            })
         }
     }
 })
