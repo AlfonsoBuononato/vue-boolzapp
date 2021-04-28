@@ -51,7 +51,9 @@
                 <!-- ASIDE SEARCH -->
                 <div class="search">
                     <button><i class="fas fa-search"></i></button>
-                    <input type="text" placeholder="cerca o inizia una nuova chat" v-model="searchInput" @keyup="ricerca">
+                    <input type="text" 
+                        placeholder="cerca o inizia una nuova chat" v-model="searchInput"
+                        @keyup="ricerca">
                 </div>
 
                 <!-- ASIDE CONTACTS -->
@@ -61,7 +63,8 @@
                         v-for="(contact, index) in contacts"
                         @click="chat(index)"
                         v-show="contact.visible == true">
-                        <img class="img-contact" :src="'img/'+'avatar' + contact.avatar + '.jpg'">
+                        <img class="img-contact" 
+                            :src="'img/'+'avatar' + contact.avatar + '.jpg'">
                         <span>{{contact.name}}</span>
                     </div>
                 </div>
@@ -96,13 +99,15 @@
                     <div class="message" 
                             v-for="(message, index) in this.contacts[this.indexContacts].messages">
                         <div class="messaggi-ricevuti">
-                            <div class="nuvoletta-ricevuti size-12 bianco" v-show="message.status == 'received'"> 
+                            <div class="nuvoletta-ricevuti size-12 bianco"
+                                v-show="message.status == 'received'"> 
                                 <span>{{message.message}}</span>
                                 <span class="data size-8">{{message.date}}</span>
                             </div>
                         </div>
                         <div class="messaggi-inviati">
-                            <div class="nuvoletta-inviati size-12 verde-chiaro" v-show="message.status == 'sent'">
+                            <div class="nuvoletta-inviati size-12 verde-chiaro"
+                                v-show="message.status == 'sent'">
                                 <span>{{message.message}}</span>
                                 <span class="data size-8">{{message.date}}</span>
                             </div>
@@ -113,14 +118,21 @@
                 <!-- SECTION MAIN FOOTER -->
                 <section class="footer">
                     <div class="smile">
-                        <i class="far fa-smile"></i>
+                        <i class="far fa-smile"
+                           @click="addClass"></i>
+                        <div class="box-emoji" 
+                            :class="emoji.status" >
+                            <i v-for="(emo, index) in this.emoji.emoticon"
+                               @click="addInput(index)">{{emo}}</i>
+                        </div>
                     </div>
                     <div class="text">
                         <input class="size-10"
                             type="text" 
                             placeholder="Scrivi un messaggio"
                             @keyup.enter="addMessage"
-                            v-model.trim="textInput">
+                            v-model.trim="textInput"
+                            ref="ciao">
                     </div>
                     <div class="registration">
                         <i class="fas fa-microphone"></i>
