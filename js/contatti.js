@@ -13,6 +13,8 @@ Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati
 
 // Elenco contatti
 
+dayjs.extend(dayjs_plugin_customParseFormat);
+
 const app = new Vue({
     el: "#app",
     data:{
@@ -112,6 +114,7 @@ const app = new Vue({
         addMessage(){
             if(this.textInput !== ""){
                 this.contacts[this.indexContacts].messages.push({
+                    date: dayjs().format("HH:mm:ss"),
                     message: this.textInput,
                     status: 'sent',
                 })
@@ -120,6 +123,7 @@ const app = new Vue({
             }
             setTimeout(() =>{
                 this.contacts[this.indexContacts].messages.push({
+                    date: dayjs().format("HH:mm:ss"),
                     message: "ok",
                     status: 'received',
                 })

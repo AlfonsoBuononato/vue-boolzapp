@@ -120,8 +120,7 @@
                             type="text" 
                             placeholder="Scrivi un messaggio"
                             @keyup.enter="addMessage"
-                            @keyup.enter="addRisposta"
-                            v-model="textInput">
+                            v-model.trim="textInput">
                     </div>
                     <div class="registration">
                         <i class="fas fa-microphone"></i>
@@ -132,6 +131,9 @@
         </div>
 
     </div>
+    <!-- DAY JS -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.4/plugin/customParseFormat.js"></script>
     <!-- SCRIPT -->
     <script src="js/contatti.js"></script>
 </body>
