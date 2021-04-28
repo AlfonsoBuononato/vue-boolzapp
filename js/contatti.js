@@ -150,10 +150,12 @@ const app = new Vue({
             } else{
                 this.emoji.status = "active-none"
             }
+            
+            this.$refs.write.focus();
         },
         addInput(index){
             this.textInput += this.emoji.emoticon[index];
-            this.$refs.ciao.focus();
+            this.$refs.write.focus();
         }
     }
 })

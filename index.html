@@ -123,7 +123,8 @@
                         <div class="box-emoji" 
                             :class="emoji.status" >
                             <i v-for="(emo, index) in this.emoji.emoticon"
-                               @click="addInput(index)">{{emo}}</i>
+                               @click="addInput(index)"
+                               ref="write">{{emo}}</i>
                         </div>
                     </div>
                     <div class="text">
@@ -132,7 +133,7 @@
                             placeholder="Scrivi un messaggio"
                             @keyup.enter="addMessage"
                             v-model.trim="textInput"
-                            ref="ciao">
+                            ref="write">
                     </div>
                     <div class="registration">
                         <i class="fas fa-microphone"></i>
